@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <title>Be My Valentine?</title>
   <style>
     /* RESET */
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    @font-face {
+      font-family: 'IRANYekan';
+      src: url('/fonts/IRANYekanXFaNum-Bold.woff2');
+    }
 
     body {
       display: flex;
@@ -14,7 +23,7 @@
       align-items: center;
       min-height: 100vh;
       background-color: #ffdde1;
-      font-family: 'Arial', sans-serif;
+      font-family: IRANYekan, sans-serif;
       overflow: hidden;
       text-align: center;
       -webkit-tap-highlight-color: transparent;
@@ -50,6 +59,7 @@
     }
 
     button {
+      font-family: IRANYekan, sans-serif;
       width: 140px;
       height: 60px;
       font-size: 1.3rem;
@@ -124,15 +134,15 @@
 <body>
 
 <div id="mainScreen" class="container">
-  <h1>Will you be my valentine? 🌹</h1>
+  <h1>ولنتاین من میشی ؟ 🌹</h1>
   <div class="buttons">
-    <button id="yesBtn">Yes</button>
-    <button id="noBtn">No</button>
+    <button id="noBtn">نه</button>
+    <button id="yesBtn">آره</button>
   </div>
 </div>
 
 <div id="successScreen">
-  <h1>Good girl ❤️</h1>
+  <h1>آفرین دختر خوب ❤️</h1>
   <div class="gallery">
     <img src="/us1.jpeg" onerror="this.src='us1.jpg'" alt="Us 1">
     <img src="/us2.jpeg" onerror="this.src='us2.jpg'" alt="Us 2">
@@ -143,7 +153,7 @@
 </div>
 
 <div id="catScreen">
-  <h1 style="color: red;">Stop messing with me! 😾</h1>
+  <h1 style="color: red;">انقدر سر به سرم نذار! 😾</h1>
   <img id="catImg" src="/cat.png" alt="Cat with Gun">
 </div>
 
@@ -195,7 +205,7 @@
     // 1. Start 10s Timer
     if (!timerRunning) {
       timerRunning = true;
-      timerId = setTimeout(() => { showCat(); }, 10000);
+      timerId = setTimeout(() => { showCat(); }, 5000);
     }
 
     // 2. Make Fixed if not already
